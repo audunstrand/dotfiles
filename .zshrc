@@ -88,8 +88,13 @@ if [[ -n $SSH_CONNECTION ]]; then
 #
 # Example aliases
 alias k=kubectl
+alias ks=k --namespace=kube-system
 alias kctx=kubectx
 alias dash="k proxy & open 'http://localhost:8001/ui'"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source /Users/audunstrand/zsh/ssh-connect/ssh-connect.sh
 source /Users/audunstrand/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# added by travis gem
+[ -f /Users/audunstrand/.travis/travis.sh ] && source /Users/audunstrand/.travis/travis.sh
